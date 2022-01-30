@@ -23,70 +23,59 @@ Partial Class frmPizzaSelection
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblHeading = New System.Windows.Forms.Label()
-        Me.picDeepDish = New System.Windows.Forms.PictureBox()
-        Me.picThinCrust = New System.Windows.Forms.PictureBox()
         Me.btnDeepDish = New System.Windows.Forms.Button()
         Me.btnSelectPizza = New System.Windows.Forms.Button()
         Me.btnThinCrust = New System.Windows.Forms.Button()
         Me.lblInstructions = New System.Windows.Forms.Label()
         Me.lblConfirmation = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
-        CType(Me.picDeepDish, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.picThinCrust = New System.Windows.Forms.PictureBox()
+        Me.picDeepDish = New System.Windows.Forms.PictureBox()
         CType(Me.picThinCrust, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picDeepDish, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblHeading
         '
         Me.lblHeading.AutoSize = True
         Me.lblHeading.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeading.ForeColor = System.Drawing.Color.Firebrick
         Me.lblHeading.Location = New System.Drawing.Point(123, 9)
         Me.lblHeading.Name = "lblHeading"
         Me.lblHeading.Size = New System.Drawing.Size(168, 25)
         Me.lblHeading.TabIndex = 0
         Me.lblHeading.Text = "Pizza Selection"
         '
-        'picDeepDish
-        '
-        Me.picDeepDish.Location = New System.Drawing.Point(12, 47)
-        Me.picDeepDish.Name = "picDeepDish"
-        Me.picDeepDish.Size = New System.Drawing.Size(185, 150)
-        Me.picDeepDish.TabIndex = 1
-        Me.picDeepDish.TabStop = False
-        '
-        'picThinCrust
-        '
-        Me.picThinCrust.Location = New System.Drawing.Point(217, 47)
-        Me.picThinCrust.Name = "picThinCrust"
-        Me.picThinCrust.Size = New System.Drawing.Size(185, 150)
-        Me.picThinCrust.TabIndex = 2
-        Me.picThinCrust.TabStop = False
-        '
         'btnDeepDish
         '
+        Me.btnDeepDish.BackColor = System.Drawing.Color.Wheat
         Me.btnDeepDish.Location = New System.Drawing.Point(64, 203)
         Me.btnDeepDish.Name = "btnDeepDish"
         Me.btnDeepDish.Size = New System.Drawing.Size(75, 23)
         Me.btnDeepDish.TabIndex = 3
         Me.btnDeepDish.Text = "Deep Dish"
-        Me.btnDeepDish.UseVisualStyleBackColor = True
+        Me.btnDeepDish.UseVisualStyleBackColor = False
         '
         'btnSelectPizza
         '
+        Me.btnSelectPizza.BackColor = System.Drawing.Color.Wheat
+        Me.btnSelectPizza.Enabled = False
         Me.btnSelectPizza.Location = New System.Drawing.Point(170, 257)
         Me.btnSelectPizza.Name = "btnSelectPizza"
         Me.btnSelectPizza.Size = New System.Drawing.Size(75, 23)
         Me.btnSelectPizza.TabIndex = 4
         Me.btnSelectPizza.Text = "Select Pizza"
-        Me.btnSelectPizza.UseVisualStyleBackColor = True
+        Me.btnSelectPizza.UseVisualStyleBackColor = False
         '
         'btnThinCrust
         '
+        Me.btnThinCrust.BackColor = System.Drawing.Color.Wheat
         Me.btnThinCrust.Location = New System.Drawing.Point(274, 203)
         Me.btnThinCrust.Name = "btnThinCrust"
         Me.btnThinCrust.Size = New System.Drawing.Size(75, 23)
         Me.btnThinCrust.TabIndex = 5
         Me.btnThinCrust.Text = "Thin Crust"
-        Me.btnThinCrust.UseVisualStyleBackColor = True
+        Me.btnThinCrust.UseVisualStyleBackColor = False
         '
         'lblInstructions
         '
@@ -106,20 +95,46 @@ Partial Class frmPizzaSelection
         Me.lblConfirmation.Size = New System.Drawing.Size(128, 13)
         Me.lblConfirmation.TabIndex = 7
         Me.lblConfirmation.Text = "Enjoy your pizza selection"
+        Me.lblConfirmation.Visible = False
         '
         'btnExit
         '
+        Me.btnExit.BackColor = System.Drawing.Color.Wheat
+        Me.btnExit.Enabled = False
         Me.btnExit.Location = New System.Drawing.Point(326, 321)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 8
         Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'picThinCrust
+        '
+        Me.picThinCrust.BackgroundImage = Global.PizzaSelection.My.Resources.Resources.ThinCrust
+        Me.picThinCrust.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.picThinCrust.Location = New System.Drawing.Point(217, 47)
+        Me.picThinCrust.Name = "picThinCrust"
+        Me.picThinCrust.Size = New System.Drawing.Size(185, 150)
+        Me.picThinCrust.TabIndex = 2
+        Me.picThinCrust.TabStop = False
+        Me.picThinCrust.Visible = False
+        '
+        'picDeepDish
+        '
+        Me.picDeepDish.BackgroundImage = Global.PizzaSelection.My.Resources.Resources.DeepDish
+        Me.picDeepDish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.picDeepDish.Location = New System.Drawing.Point(12, 47)
+        Me.picDeepDish.Name = "picDeepDish"
+        Me.picDeepDish.Size = New System.Drawing.Size(185, 150)
+        Me.picDeepDish.TabIndex = 1
+        Me.picDeepDish.TabStop = False
+        Me.picDeepDish.Visible = False
         '
         'frmPizzaSelection
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(414, 356)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.lblConfirmation)
@@ -132,8 +147,8 @@ Partial Class frmPizzaSelection
         Me.Controls.Add(Me.lblHeading)
         Me.Name = "frmPizzaSelection"
         Me.Text = "Pizza Selection"
-        CType(Me.picDeepDish, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picThinCrust, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picDeepDish, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
